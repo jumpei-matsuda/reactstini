@@ -1,0 +1,946 @@
+<!DOCTYPE html><html><head>
+      <title>index</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\makko\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.7\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+body {
+  counter-reset: chapter;
+}
+h3 {
+  counter-reset: sub-chapter;
+}
+.markdown-preview.markdown-preview body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif, 'Meiryo';
+  font-size: var(--vscode-markdown-font-size, 14px);
+  padding: 0 26px;
+  line-height: var(--vscode-markdown-line-height, 22px);
+  word-wrap: break-word;
+}
+.markdown-preview.markdown-preview h1 {
+  padding-bottom: 0.3em;
+  line-height: 1.2;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+}
+.markdown-preview.markdown-preview h2 {
+  padding-bottom: 0.3em;
+  line-height: 1.2;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+.markdown-preview.markdown-preview h1,
+.markdown-preview.markdown-preview h2,
+.markdown-preview.markdown-preview h3 {
+  font-weight: bold;
+}
+.markdown-preview.markdown-preview h3::before {
+  counter-increment: chapter;
+  content: counter(chapter) '. ';
+}
+img {
+  border: 1px solid;
+}
+.create-update-date {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  margin-right: 20px;
+}
+.create-update-date label {
+  color: gray;
+}
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <div class="create-update-date">
+  <label>&#x4F5C;&#x6210;&#x65E5;&#xFF1A;2023/1/20</label>
+  <label>&#x66F4;&#x65B0;&#x65E5;&#xFF1A;2023/2/18</label>
+</div>
+<h1 class="mume-header undefined" id="-reactstini-%E7%AC%AC4%E5%8F%B7">Reactstini &#x7B2C;4&#x53F7;</h1>
+
+<h2 class="mume-header undefined" id="-%E4%BB%8A%E5%9B%9E%E3%81%AE%E7%9B%AE%E6%A8%99">&#x4ECA;&#x56DE;&#x306E;&#x76EE;&#x6A19;</h2>
+
+<ul>
+<li>Firebase&#x306E;&#x8A2D;&#x5B9A;&#x3092;&#x884C;&#x3044;&#x3001;&#x30B5;&#x30FC;&#x30D0;&#x30FC;&#x63A5;&#x7D9A;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x3059;&#x308B;&#x3002;</li>
+</ul>
+<h2 class="mume-header undefined" id="-%E4%BB%8A%E5%9B%9E%E8%A1%8C%E3%81%86%E6%89%8B%E9%A0%86">&#x4ECA;&#x56DE;&#x884C;&#x3046;&#x624B;&#x9806;</h2>
+
+<div class="code-chunk" data-id="code-chunk-id-0" data-cmd="toc"><div class="input-div"><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><ol>
+<li><a href="#-firebase%E3%81%AE%E5%B0%8E%E5%85%A5-">Firebase&#x306E;&#x5C0E;&#x5165;</a>
+<ol>
+<li><a href="#-%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB-">&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</a></li>
+<li><a href="#-firebase%E3%81%AE%E8%A8%AD%E5%AE%9A-">Firebase&#x306E;&#x8A2D;&#x5B9A;</a></li>
+<li><a href="#-react%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AEfirebase%E3%81%AE%E8%A8%AD%E5%AE%9A-">react&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;Firebase&#x306E;&#x8A2D;&#x5B9A;</a></li>
+</ol>
+</li>
+<li><a href="#-%E8%AA%8D%E8%A8%BC%E6%A9%9F%E8%83%BD%E3%81%AE%E5%AE%9F%E8%A3%85-">&#x8A8D;&#x8A3C;&#x6A5F;&#x80FD;&#x306E;&#x5B9F;&#x88C5;</a></li>
+<li><a href="#-db%E7%99%BB%E9%8C%B2%E5%87%A6%E7%90%86%E3%81%AE%E5%AE%9F%E8%A3%85-">DB&#x767B;&#x9332;&#x51E6;&#x7406;&#x306E;&#x5B9F;&#x88C5;</a></li>
+</ol>
+<h2 class="mume-header undefined" id="-%E6%89%80%E8%A6%81%E6%99%82%E9%96%93">&#x6240;&#x8981;&#x6642;&#x9593;</h2>
+
+<ul>
+<li>20&#xFF5E;30&#x5206;&#xFF08;&#x305F;&#x3076;&#x3093;&#xFF09;</li>
+</ul>
+<h3 class="mume-header" id="-firebase%E3%81%AE%E5%B0%8E%E5%85%A5-">Firebase&#x306E;&#x5C0E;&#x5165;</h3>
+
+<h4 class="mume-header" id="-%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB-">&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</h4>
+
+<p>&#x6700;&#x7D42;&#x53F7;&#x3067;&#x3059;&#x304C;&#x3001;&#x30B5;&#x30FC;&#x30D0;&#x30FC;&#x63A5;&#x7D9A;&#x3092;&#x76EE;&#x6A19;&#x306B;&#x9032;&#x3081;&#x3066;&#x3044;&#x304D;&#x307E;&#x3059;&#x3002;&#x4ECA;&#x56DE;&#x306F;Firebase&#x3092;&#x4F7F;&#x7528;&#x3057;&#x307E;&#x3059;&#x304C;&#x3001;&#x77E5;&#x8B58;&#x304C;&#x3042;&#x308B;&#x65B9;&#x3067;&#x3042;&#x308C;&#x3070;SpringBoot&#x3067;&#x5B9F;&#x88C5;&#x3057;&#x305F;&#x308A;&#x3001;AWS&#x3092;&#x4F7F;&#x7528;&#x3057;&#x3066;&#x9802;&#x3044;&#x3066;&#x3082;&#x5927;&#x4E08;&#x592B;&#x3067;&#x3059;&#x3002;</p>
+<p>Firebase&#x81EA;&#x4F53;&#x306E;&#x8A2D;&#x5B9A;&#x306E;&#x524D;&#x306B;&#x3001;react&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3067;firebase&#x3092;&#x4F7F;&#x7528;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x3092;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;&#x5F8C;&#x307B;&#x3069;&#x7D30;&#x304B;&#x3044;&#x8A2D;&#x5B9A;&#x3092;&#x884C;&#x3044;&#x307E;&#x3059;&#x306E;&#x3067;&#x3001;&#x4ECA;&#x306F;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3060;&#x3051;&#x3067;&#x5927;&#x4E08;&#x592B;&#x3067;&#x3059;&#x3002;</p>
+<pre data-role="codeBlock" data-info="text" class="language-text">yarn add firebase
+yarn add firebase-tools
+</pre><h4 class="mume-header" id="-firebase%E3%81%AE%E8%A8%AD%E5%AE%9A-">Firebase&#x306E;&#x8A2D;&#x5B9A;</h4>
+
+<p>&#x305D;&#x308C;&#x3067;&#x306F;Firebase&#x306E;&#x8A2D;&#x5B9A;&#x3092;&#x884C;&#x3063;&#x3066;&#x3044;&#x304D;&#x307E;&#x3059;&#x3002;&#x307E;&#x305A;<a href="https://console.firebase.google.com/u/0/?hl=ja">Firebase</a>&#x306B;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x3057;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;&#x300C;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3092;&#x4F5C;&#x6210;&#x300D;&#x3092;&#x62BC;&#x4E0B;&#x3057;&#x4EFB;&#x610F;&#x306E;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x540D;&#x3092;&#x8A2D;&#x5B9A;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
+<p>&#x305D;&#x306E;&#x5F8C;Google&#x30A2;&#x30CA;&#x30EA;&#x30C6;&#x30A3;&#x30AF;&#x30B9;&#x306E;&#x8A2D;&#x5B9A;&#x753B;&#x9762;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x307E;&#x3059;&#x304C;&#x3001;&#x4ECA;&#x56DE;&#x306F;&#x7279;&#x306B;&#x4E0D;&#x8981;&#x306A;&#x306E;&#x3067;&#x30C1;&#x30A7;&#x30C3;&#x30AF;&#x3092;&#x5916;&#x3057;&#x3066;&#x3082;&#x5927;&#x4E08;&#x592B;&#x3067;&#x3059;&#x3002;&#x305D;&#x306E;&#x307E;&#x307E;&#x53F3;&#x4E0B;&#x306E;&#x300C;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3092;&#x4F5C;&#x6210;&#x300D;&#x30DC;&#x30BF;&#x30F3;&#x3092;&#x62BC;&#x4E0B;&#x3057;&#x3066;&#x3057;&#x3070;&#x3089;&#x304F;&#x5F85;&#x6A5F;&#x3059;&#x308B;&#x3068;&#x4F5C;&#x6210;&#x304C;&#x5B8C;&#x4E86;&#x3057;&#x307E;&#x3059;&#x3002;<br>
+&#x300C;&#x7D9A;&#x884C;&#x300D;&#x3092;&#x62BC;&#x4E0B;&#x3059;&#x308B;&#x3068;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x753B;&#x9762;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x3053;&#x3068;&#x3092;&#x78BA;&#x8A8D;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
+<p><img src="./images/firebase_top.png" alt="Firebase_&#x30C8;&#x30C3;&#x30D7;"></p>
+<p>&#x7D9A;&#x3044;&#x3066;&#x753B;&#x9762;&#x4E2D;&#x592E;&#x306B;&#x3042;&#x308B;&#x300C;&lt;/&gt;&#xFF08;&#x30A6;&#x30A7;&#x30D6;&#xFF09;&#x300D;&#x3068;&#x3044;&#x3046;&#x30DC;&#x30BF;&#x30F3;&#x304B;&#x3089;&#x30A2;&#x30D7;&#x30EA;&#x306E;&#x767B;&#x9332;&#x3092;&#x884C;&#x3044;&#x307E;&#x3059;&#x3002;&#x4EFB;&#x610F;&#x306E;&#x30CB;&#x30C3;&#x30AF;&#x30CD;&#x30FC;&#x30E0;&#x3092;&#x5165;&#x529B;&#x3057;&#x3001;Firebase Hosting&#x306E;&#x8A2D;&#x5B9A;&#x306B;&#x30C1;&#x30A7;&#x30C3;&#x30AF;&#x3092;&#x3044;&#x308C;&#x3066;&#x300C;&#x30A2;&#x30D7;&#x30EA;&#x3092;&#x767B;&#x9332;&#x300D;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<p>&#x767B;&#x9332;&#x304C;&#x5B8C;&#x4E86;&#x3059;&#x308B;&#x3068;&#x3001;&#x300C;Firebase SDK &#x306E;&#x8FFD;&#x52A0;&#x300D;&#x3068;&#x3044;&#x3046;&#x9805;&#x76EE;&#x306B;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x308B;&#x304B;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x304C;&#x3001;&#x4E00;&#x5EA6;&#x5DE6;&#x4E0A;&#x306E;&#x2715;&#x30DC;&#x30BF;&#x30F3;&#x3067;&#x753B;&#x9762;&#x3092;&#x9589;&#x3058;&#x3001;&#x7D9A;&#x3044;&#x3066;&#x30C7;&#x30FC;&#x30BF;&#x30D9;&#x30FC;&#x30B9;&#x306E;&#x8A2D;&#x5B9A;&#x3092;&#x884C;&#x3044;&#x307E;&#x3059;&#x3002;&#x5DE6;&#x306E;&#x30C4;&#x30FC;&#x30EB;&#x30D0;&#x30FC;&#x306E;&#x300C;&#x69CB;&#x7BC9;&#x300D;&#x5185;&#x306B;&#x3042;&#x308B;&#x300C;Firebase Database&#x300D;&#x3092;&#x9078;&#x629E;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;&#x4ECA;&#x56DE;&#x306F;&#x300C;<strong>Cloud Firestore</strong>&#x300D;&#x3068;&#x3044;&#x3046;&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;&#x578B;&#x306E;&#x30C7;&#x30FC;&#x30BF;&#x30D9;&#x30FC;&#x30B9;&#x3092;&#x4F7F;&#x7528;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<p><img src="./images/firebase_db1.png" alt="Firestore_Database"></p>
+<p>&#x4E0A;&#x8A18;&#x306E;&#x3088;&#x3046;&#x306A;&#x753B;&#x9762;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x308C;&#x3070;&#x3001;&#x771F;&#x3093;&#x4E2D;&#x8FBA;&#x308A;&#x306E;&#x300C;&#x30C7;&#x30FC;&#x30BF;&#x30D9;&#x30FC;&#x30B9;&#x306E;&#x4F5C;&#x6210;&#x300D;&#x3092;&#x62BC;&#x4E0B;&#x3057;&#x307E;&#x3059;&#x3002;&#x672C;&#x756A;&#x904B;&#x7528;&#x304B;&#x30C6;&#x30B9;&#x30C8;&#x904B;&#x7528;&#x304B;&#x9078;&#x629E;&#x3059;&#x308B;&#x30E2;&#x30FC;&#x30C0;&#x30EB;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x308B;&#x304B;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x304C;&#x3001;&#x4E00;&#x5EA6;&#x30C6;&#x30B9;&#x30C8;&#x904B;&#x7528;&#x3092;&#x9078;&#x629E;&#x3057;&#x3066;&#x30C7;&#x30FC;&#x30BF;&#x30D9;&#x30FC;&#x30B9;&#x3092;&#x4F5C;&#x6210;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;&#x3057;&#x3070;&#x3089;&#x304F;&#x3059;&#x308B;&#x3068;&#x30C7;&#x30FC;&#x30BF;&#x30D9;&#x30FC;&#x30B9;&#x304C;&#x4F5C;&#x6210;&#x3055;&#x308C;&#x30B3;&#x30F3;&#x30BD;&#x30FC;&#x30EB;&#x306B;&#x79FB;&#x52D5;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<p>&#x7D9A;&#x3044;&#x3066;&#x3001;Cloud Firestore&#x306E;&#x30ED;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x8A2D;&#x5B9A;&#x3092;&#x884C;&#x3044;&#x307E;&#x3059;&#x3002;&#xFF08;&#x7B46;&#x8005;&#x306F;&#x3053;&#x3053;&#x304C;&#x5B8C;&#x4E86;&#x3057;&#x3066;&#x3044;&#x306A;&#x3044;&#x3053;&#x3068;&#x306B;&#x6C17;&#x3065;&#x304B;&#x305A;&#x60AA;&#x6226;&#x82E6;&#x95D8;&#x3057;&#x3066;&#x307E;&#x3057;&#x305F;&#x3002;&#xFF09;&#x300C;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x6982;&#x8981;&#x300D;&#x306E;&#x53F3;&#x306E;&#x6B6F;&#x8ECA;&#x3092;&#x62BC;&#x4E0B;&#x3057;&#x8A2D;&#x5B9A;&#x753B;&#x9762;&#x3092;&#x958B;&#x304D;&#x3001;&#x300C;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x306E; GCP &#x30EA;&#x30BD;&#x30FC;&#x30B9; &#x30ED;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x300D;&#x306E;&#x8A2D;&#x5B9A;&#x3092;&#x5B8C;&#x4E86;&#x3055;&#x305B;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;&#x958B;&#x3044;&#x305F;&#x30E2;&#x30FC;&#x30C0;&#x30EB;&#x306E;&#x4E0B;&#x90E8;&#x306B;&#x8868;&#x793A;&#x3055;&#x308C;&#x308B;&#x300C;&#x5B8C;&#x4E86;&#x300D;&#x30DC;&#x30BF;&#x30F3;&#x3092;&#x305D;&#x306E;&#x307E;&#x307E;&#x62BC;&#x4E0B;&#x3059;&#x308B;&#x3068;&#x5B8C;&#x4E86;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<p><img src="./images/firebase_location.png" alt="firebase_&#x30ED;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x8A2D;&#x5B9A;"></p>
+<h4 class="mume-header" id="-react%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AEfirebase%E3%81%AE%E8%A8%AD%E5%AE%9A-">react&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;Firebase&#x306E;&#x8A2D;&#x5B9A;</h4>
+
+<p>&#x3053;&#x3053;&#x3067;react&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;&#x623B;&#x308A;&#x307E;&#x3059;&#x3002;&#x300C;firebase.ts&#x300D;&#x3068;&#x3044;&#x3046;Firebase&#x306E;&#x8A2D;&#x5B9A;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;<strong>src&#x76F4;&#x4E0B;&#x306B;</strong>&#x4F5C;&#x6210;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
+<p>&#x30ED;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x8A2D;&#x5B9A;&#x3067;&#x958B;&#x3044;&#x305F;&#x753B;&#x9762;&#x3092;&#x4E0B;&#x306B;&#x30B9;&#x30AF;&#x30ED;&#x30FC;&#x30EB;&#x3059;&#x308B;&#x3068;&#x4F5C;&#x6210;&#x3057;&#x305F;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x306E;SDK&#x306E;&#x8A2D;&#x5B9A;&#x306E;&#x8A73;&#x7D30;&#x304C;&#x8868;&#x793A;&#x67FB;&#x5B9A;&#x308B;&#x304B;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x306E;&#x3067;&#x3001;&#x300C;firebase.ts&#x300D;&#x306B;&#x8A2D;&#x5B9A;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
+<p>firebase.ts</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword module keyword-import">import</span> <span class="token imports">firebase</span> <span class="token keyword module keyword-from">from</span> <span class="token string">&apos;firebase/app&apos;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token string">&apos;firebase/auth&apos;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token string">&apos;firebase/firestore&apos;</span>
+
+<span class="token keyword keyword-const">const</span> firebaseConfig <span class="token operator">=</span> <span class="token punctuation">{</span>
+  apiKey<span class="token operator">:</span> <span class="token punctuation">{</span>&#x8A18;&#x8F09;&#x3055;&#x308C;&#x305F;apiKey<span class="token punctuation">}</span><span class="token punctuation">,</span>
+  authDomain<span class="token operator">:</span> <span class="token punctuation">{</span>&#x8A18;&#x8F09;&#x3055;&#x308C;&#x305F;authDomain<span class="token punctuation">}</span><span class="token punctuation">,</span>
+  projectId<span class="token operator">:</span> <span class="token punctuation">{</span>&#x8A18;&#x8F09;&#x3055;&#x308C;&#x305F;projectId<span class="token punctuation">}</span><span class="token punctuation">,</span>
+  storageBucket<span class="token operator">:</span> <span class="token punctuation">{</span>&#x8A18;&#x8F09;&#x3055;&#x308C;&#x305F;storageBucket<span class="token punctuation">}</span><span class="token punctuation">,</span>
+  messagingSenderId<span class="token operator">:</span> <span class="token punctuation">{</span>&#x8A18;&#x8F09;&#x3055;&#x308C;&#x305F;messagingSenderId<span class="token punctuation">}</span><span class="token punctuation">,</span>
+  appId<span class="token operator">:</span> <span class="token punctuation">{</span>&#x8A18;&#x8F09;&#x3055;&#x308C;&#x305F;appId<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+firebase<span class="token punctuation">.</span><span class="token method function property-access">initializeApp</span><span class="token punctuation">(</span>firebaseConfig<span class="token punctuation">)</span>
+<span class="token keyword module keyword-export">export</span> <span class="token keyword keyword-const">const</span> db <span class="token operator">=</span> <span class="token function">getFirestore</span><span class="token punctuation">(</span>app<span class="token punctuation">)</span>
+</pre><p>&#x7D9A;&#x3044;&#x3066;&#x30BF;&#x30FC;&#x30DF;&#x30CA;&#x30EB;&#x304B;&#x3089;&#x64CD;&#x4F5C;&#x3059;&#x308B;&#x306E;&#x3067;&#x3001;&#x30BF;&#x30FC;&#x30DF;&#x30CA;&#x30EB;&#x304B;&#x3089;&#x30BD;&#x30FC;&#x30B9;&#x76F4;&#x4E0B;&#x306B;&#x79FB;&#x52D5;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;&#xFF08;VS Code&#x3092;&#x4F7F;&#x7528;&#x3057;&#x3066;&#x3044;&#x308B;&#x578B;&#x306F;&#x30C4;&#x30FC;&#x30EB;&#x30D0;&#x30FC;&#x306E;&#x300C;&#x30BF;&#x30FC;&#x30DF;&#x30CA;&#x30EB; &gt; &#x65B0;&#x3057;&#x3044;&#x30BF;&#x30FC;&#x30DF;&#x30CA;&#x30EB;&#x300D;&#x304B;&#x3089;&#x958B;&#x304F;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;&#xFF09;</p>
+<p>&#x307E;&#x305A;&#x306F;firebase&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3092;&#x4F5C;&#x6210;&#x3057;&#x305F;Google&#x30A2;&#x30AB;&#x30A6;&#x30F3;&#x30C8;&#x306B;&#x30ED;&#x30B0;&#x30A4;&#x30F3;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<pre data-role="codeBlock" data-info="text" class="language-text">firebase login
+</pre><p>&#x305D;&#x306E;&#x5F8C;Firebase&#x306E;&#x521D;&#x671F;&#x8A2D;&#x5B9A;&#x3092;&#x884C;&#x3044;&#x307E;&#x3059;&#x3002;&#x5BFE;&#x8A71;&#x5F62;&#x5F0F;&#x3067;&#x8A2D;&#x5B9A;&#x3059;&#x308B;&#x306E;&#x3067;&#x4EE5;&#x4E0B;&#x3092;&#x53C2;&#x8003;&#x306B;&#x9032;&#x3081;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
+<pre data-role="codeBlock" data-info="text" class="language-text">firebase init
+
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You&apos;re about to initialize a Firebase project in this directory:
+
+  C:\Users\makko\Project\React\reactstini
+
+? Are you ready to proceed? Yes
+? Which Firebase features do you want to set up for this directory?  
+(&#x3007;)Firestore: Configure security rules and indexes files for Firestore, 
+(&#x3007;)Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys
+
+=== Project Setup
+
+First, let&apos;s associate this project directory with a Firebase project.
+You can create multiple project aliases by running firebase use --add,
+but for now we&apos;ll just set up a default project.
+
+? Please select an option: Use an existing project
+? Select a default Firebase project for this directory: {&#x4F5C;&#x6210;&#x3057;&#x305F;&#x30A2;&#x30D7;&#x30EA;&#x540D;}
+i  Using project {&#x4F5C;&#x6210;&#x3057;&#x305F;&#x30A2;&#x30D7;&#x30EA;&#x540D;}
+
+=== Firestore Setup
+
+Firestore Security Rules allow you to define how and when to allow
+requests. You can keep these rules in your project directory
+and publish them with firebase deploy.
+
+? What file should be used for Firestore Rules? firestore.rules
+
+Firestore indexes allow you to perform complex queries while
+maintaining performance that scales with the size of the result
+set. You can keep index definitions in your project directory
+and publish them with firebase deploy.
+
+? What file should be used for Firestore indexes? firestore.indexes.json
+
+=== Hosting Setup
+
+Your public directory is the folder (relative to your project directory) that
+will contain Hosting assets to be uploaded with firebase deploy. If you
+have a build process for your assets, use your build&apos;s output directory.
+
+? What do you want to use as your public directory? dist
+? Configure as a single-page app (rewrite all urls to /index.html)? Yes
+? Set up automatic builds and deploys with GitHub? No
+? File dist/index.html already exists. Overwrite? No
+i  Skipping write of dist/index.html
+
+i  Writing configuration info to firebase.json...
+i  Writing project information to .firebaserc...
+
++  Firebase initialization complete!
+</pre><p>&#x4ECA;&#x56DE;&#x306F;Cloud Firestore&#x3068;Hosting&#x3068;&#x3044;&#x3046;&#x304B;&#x306A;&#x308A;&#x9650;&#x5B9A;&#x7684;&#x306A;&#x4F7F;&#x3044;&#x65B9;&#x3092;&#x3057;&#x3066;&#x3044;&#x304D;&#x307E;&#x3059;&#x3002;&#x3053;&#x3053;&#x307E;&#x3067;&#x304F;&#x308B;&#x3068;&#x5F8C;&#x306F;&#x30D3;&#x30EB;&#x30C9;&#x3057;&#x3066;&#x30C7;&#x30D7;&#x30ED;&#x30A4;&#x3059;&#x308B;&#x3060;&#x3051;&#x3067;&#x3059;&#x3002;&#x4EE5;&#x4E0B;&#x306E;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3092;&#x5B9F;&#x884C;&#x3057;Firebase&#x4E0A;&#x306B;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3092;&#x30C7;&#x30D7;&#x30ED;&#x30A4;&#x3057;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
+<pre data-role="codeBlock" data-info="text" class="language-text">yarn build
+firebase deploy --only &quot;hosting,firestore&quot;
+</pre><p>&#x6B63;&#x5E38;&#x7D42;&#x4E86;&#x304C;&#x78BA;&#x8A8D;&#x51FA;&#x6765;&#x305F;&#x3089;&#x3001;&#x5DE6;&#x306E;&#x30C4;&#x30FC;&#x30EB;&#x30D0;&#x30FC;&#x306E;&#x300C;&#x69CB;&#x7BC9;&#x300D;&#x5185;&#x306B;&#x3042;&#x308B;&#x300C;Hosting&#x300D;&#x3092;&#x62BC;&#x4E0B;&#x3057;&#x3001;&#x8868;&#x793A;&#x3055;&#x308C;&#x305F;URL&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;&#x3053;&#x308C;&#x307E;&#x3067;&#x306B;&#x4F5C;&#x6210;&#x3057;&#x305F;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x308B;&#x304B;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<p>&#x3053;&#x3053;&#x307E;&#x3067;&#x78BA;&#x8A8D;&#x3067;&#x304D;&#x308C;&#x3070;&#x30C7;&#x30D7;&#x30ED;&#x30A4;&#x306F;&#x5B8C;&#x4E86;&#x3067;&#x3059;&#x3002;</p>
+<h3 class="mume-header" id="-%E8%AA%8D%E8%A8%BC%E6%A9%9F%E8%83%BD%E3%81%AE%E5%AE%9F%E8%A3%85-">&#x8A8D;&#x8A3C;&#x6A5F;&#x80FD;&#x306E;&#x5B9F;&#x88C5;</h3>
+
+<p>&#x7D9A;&#x3044;&#x3066;&#x8A8D;&#x8A3C;&#x6A5F;&#x80FD;&#x3092;&#x5B9F;&#x88C5;&#x3057;&#x307E;&#x3059;&#x3002;&#x8AB0;&#x3067;&#x3082;DB&#x64CD;&#x4F5C;&#x304C;&#x884C;&#x3048;&#x3066;&#x3057;&#x307E;&#x3046;&#x3068;&#x30BB;&#x30AD;&#x30E5;&#x30EA;&#x30C6;&#x30A3;&#x9762;&#x3067;&#x554F;&#x984C;&#x304C;&#x3042;&#x308B;&#x305F;&#x3081;&#x3001;&#x8A8D;&#x8A3C;&#x3055;&#x308C;&#x305F;&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x306E;&#x307F;&#x304C;&#x64CD;&#x4F5C;&#x3092;&#x884C;&#x3048;&#x308B;&#x3088;&#x3046;&#x306B;&#x8A2D;&#x5B9A;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;Firebase&#x3067;&#x306F;&#x3044;&#x304F;&#x3064;&#x304B;&#x306E;&#x8A8D;&#x8A3C;&#x65B9;&#x6CD5;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x304C;&#x3001;&#x4ECA;&#x56DE;&#x306F;&#x30E1;&#x30FC;&#x30EB;&#x3068;&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x306B;&#x3088;&#x308B;&#x8A8D;&#x8A3C;&#x3092;&#x5B9F;&#x88C5;&#x3057;&#x3066;&#x3044;&#x304D;&#x307E;&#x3059;&#x3002;<br>
+&#x5DE6;&#x306E;&#x30C4;&#x30FC;&#x30EB;&#x30D0;&#x30FC;&#x306E;&#x300C;&#x69CB;&#x7BC9;&#x300D;&#x5185;&#x306B;&#x3042;&#x308B;&#x300C;Authentication&#x300D;&#x3092;&#x62BC;&#x4E0B;&#x3057;&#x3001;&#x753B;&#x9762;&#x306B;&#x8868;&#x793A;&#x3055;&#x308C;&#x305F;&#x300C;&#x59CB;&#x3081;&#x308B;&#x300D;&#x30DC;&#x30BF;&#x30F3;&#x3092;&#x62BC;&#x4E0B;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;&#x753B;&#x9762;&#x4E2D;&#x592E;&#x306B;&#x3072;&#x3087;&#x3046;&#x3058;&#x3055;&#x308C;&#x305F;&#x300C;&#x30E1;&#x30FC;&#x30EB; / &#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x300D;&#x30DC;&#x30BF;&#x30F3;&#x3092;&#x62BC;&#x4E0B;&#x3057;&#x3001;&#x300C;&#x6709;&#x52B9;&#x306B;&#x3059;&#x308B;&#x300D;&#x30C8;&#x30B0;&#x30EB;&#x306B;&#x30C1;&#x30A7;&#x30C3;&#x30AF;&#x3092;&#x3044;&#x308C;&#x3066;&#x4FDD;&#x5B58;&#x3057;&#x307E;&#x3059;&#x3002;&#x3053;&#x308C;&#x3067;&#x30E1;&#x30FC;&#x30EB;&#x3068;&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x306B;&#x3088;&#x308B;&#x8A8D;&#x8A3C;&#x6A5F;&#x80FD;&#x304C;&#x8A2D;&#x5B9A;&#x3055;&#x308C;&#x307E;&#x3057;&#x305F;&#x3002;</p>
+<p><img src="images/Authentication_01.png" alt="Authentication_01"><br>
+<img src="images/Authentication_02.png" alt="Authentication_02"></p>
+<p>Firebase&#x30B3;&#x30F3;&#x30BD;&#x30FC;&#x30EB;&#x304B;&#x3089;&#x30E1;&#x30FC;&#x30EB;&#x3068;&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x3082;&#x8A2D;&#x5B9A;&#x3067;&#x304D;&#x307E;&#x3059;&#x304C;&#x3001;&#x305B;&#x3063;&#x304B;&#x304F;&#x306A;&#x306E;&#x3067;&#x30ED;&#x30B0;&#x30A4;&#x30F3;&#x753B;&#x9762;&#x3068;&#x65B0;&#x898F;&#x767B;&#x9332;&#x753B;&#x9762;&#x3082;&#x5B9F;&#x88C5;&#x3057;&#x3066;&#x898B;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
+<p>&#x305D;&#x306E;&#x524D;&#x306B;&#x3001;</p>
+<p>&#x307E;&#x305A;&#x306F;&#x30ED;&#x30B0;&#x30A4;&#x30F3;&#x60C5;&#x5831;&#x3092;&#x4FDD;&#x6301;&#x3059;&#x308B;&#x305F;&#x3081;&#x306E;Context&#x3092;&#x4F5C;&#x6210;&#x3057;&#x307E;&#x3059;&#x3002;&#x300C;stores&#x300D;&#x914D;&#x4E0B;&#x306B;&#x300C;auth&#x300D;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x3092;&#x4F5C;&#x6210;&#x3057;&#x3001;&#x300C;AuthProvider.tsx&#x300D;&#x3068;&#x300C;useAuth.tsx&#x300D;&#x3092;&#x4F5C;&#x6210;&#x3057;&#x3001;provider&#x306B;&#x8FFD;&#x52A0;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
+<p>useAuth.tsx</p>
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> useState<span class="token punctuation">,</span> createContext<span class="token punctuation">,</span> useContext <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">&apos;react&apos;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> getAuth<span class="token punctuation">,</span> createUserWithEmailAndPassword<span class="token punctuation">,</span> signInWithEmailAndPassword<span class="token punctuation">,</span> <span class="token maybe-class-name">User</span> <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">&apos;firebase/auth&apos;</span>
+
+<span class="token keyword module keyword-export">export</span> type <span class="token maybe-class-name">AuthInfo</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  email<span class="token operator">:</span> string
+  password<span class="token operator">:</span> string
+<span class="token punctuation">}</span>
+
+<span class="token keyword module keyword-export">export</span> type <span class="token maybe-class-name">UseProvideAuth</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token comment">// &#x30ED;&#x30B0;&#x30A4;&#x30F3;&#x60C5;&#x5831;</span>
+  user<span class="token operator">:</span> <span class="token maybe-class-name">User</span> <span class="token operator">|</span> <span class="token keyword null nil keyword-null">null</span>
+  <span class="token comment">// &#x30B5;&#x30A4;&#x30F3;&#x30A4;&#x30F3;&#x51E6;&#x7406;</span>
+  <span class="token function-variable function">signin</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">signInfo<span class="token operator">:</span> <span class="token maybe-class-name">AuthInfo</span></span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token keyword keyword-void">void</span>
+  <span class="token comment">// &#x30B5;&#x30A4;&#x30F3;&#x30A2;&#x30A6;&#x30C8;&#x51E6;&#x7406;</span>
+  <span class="token function-variable function">signout</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token keyword keyword-void">void</span>
+  <span class="token comment">// &#x30B5;&#x30A4;&#x30F3;&#x30A2;&#x30C3;&#x30D7;&#x51E6;&#x7406;</span>
+  <span class="token function-variable function">signup</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">signInfo<span class="token operator">:</span> <span class="token maybe-class-name">AuthInfo</span></span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token keyword keyword-void">void</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-const">const</span> initialState<span class="token operator">:</span> <span class="token maybe-class-name">UseProvideAuth</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  user<span class="token operator">:</span> <span class="token keyword null nil keyword-null">null</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">signin</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">signout</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">signup</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * &#x30B3;&#x30F3;&#x30C6;&#x30AF;&#x30B9;&#x30C8;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;
+ */</span>
+<span class="token keyword module keyword-export">export</span> <span class="token keyword keyword-const">const</span> authContext <span class="token operator">=</span> <span class="token function">createContext</span><span class="token punctuation">(</span>initialState<span class="token punctuation">)</span>
+
+<span class="token comment">/**
+ * &#x30B3;&#x30F3;&#x30C6;&#x30AF;&#x30B9;&#x30C8;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x73FE;&#x5728;&#x5024;&#x3092;&#x8FD4;&#x3059;&#x30D5;&#x30C3;&#x30AF;
+ */</span>
+<span class="token keyword module keyword-export">export</span> <span class="token keyword keyword-const">const</span> useAuth <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token parameter"><span class="token maybe-class-name">UseProvideAuth</span></span> <span class="token arrow operator">=&gt;</span> <span class="token function">useContext</span><span class="token punctuation">(</span>authContext<span class="token punctuation">)</span>
+
+<span class="token comment">/**
+ * &#x30B3;&#x30F3;&#x30C6;&#x30AD;&#x30B9;&#x30C8;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3092;&#x66F4;&#x65B0;&#x3059;&#x308B;&#x30D5;&#x30C3;&#x30AF;
+ * @returns
+ */</span>
+<span class="token keyword module keyword-export">export</span> <span class="token keyword keyword-const">const</span> useProvideAuth <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token parameter"><span class="token maybe-class-name">UseProvideAuth</span></span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> <span class="token punctuation">[</span>user<span class="token punctuation">,</span> setUser<span class="token punctuation">]</span> <span class="token operator">=</span> useState<span class="token operator">&lt;</span><span class="token maybe-class-name">User</span> <span class="token operator">|</span> <span class="token keyword null nil keyword-null">null</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token keyword null nil keyword-null">null</span><span class="token punctuation">)</span>
+  <span class="token keyword keyword-const">const</span> auth <span class="token operator">=</span> <span class="token function">getAuth</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+  <span class="token comment">// &#x30B5;&#x30A4;&#x30F3;&#x30A4;&#x30F3;</span>
+  <span class="token keyword keyword-const">const</span> <span class="token function-variable function">signin</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">signInfo<span class="token operator">:</span> <span class="token maybe-class-name">AuthInfo</span></span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-const">const</span> getUserInfo <span class="token operator">=</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token known-class-name class-name">Promise</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>void</span><span class="token punctuation">&gt;</span></span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword keyword-const">const</span> userData <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword control-flow keyword-await">await</span> <span class="token function">signInWithEmailAndPassword</span><span class="token punctuation">(</span>auth<span class="token punctuation">,</span> signInfo<span class="token punctuation">.</span><span class="token property-access">email</span><span class="token punctuation">,</span> signInfo<span class="token punctuation">.</span><span class="token property-access">password</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token property-access">user</span>
+      <span class="token function">setUser</span><span class="token punctuation">(</span>userData<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">getUserInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// &#x30B5;&#x30A4;&#x30F3;&#x30A2;&#x30A6;&#x30C8;</span>
+  <span class="token keyword keyword-const">const</span> <span class="token function-variable function">signout</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-const">const</span> resetUserInfo <span class="token operator">=</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token known-class-name class-name">Promise</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>void</span><span class="token punctuation">&gt;</span></span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword keyword-void">void</span> <span class="token keyword control-flow keyword-await">await</span> auth<span class="token punctuation">.</span><span class="token method function property-access">signOut</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token function">setUser</span><span class="token punctuation">(</span><span class="token keyword null nil keyword-null">null</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-void">void</span> <span class="token function">resetUserInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// &#x30B5;&#x30A4;&#x30F3;&#x30A2;&#x30C3;&#x30D7;</span>
+  <span class="token keyword keyword-const">const</span> <span class="token function-variable function">signup</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">signInfo<span class="token operator">:</span> <span class="token maybe-class-name">AuthInfo</span></span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-const">const</span> addUserInfo <span class="token operator">=</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token known-class-name class-name">Promise</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>void</span><span class="token punctuation">&gt;</span></span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword keyword-const">const</span> userData <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword control-flow keyword-await">await</span> <span class="token function">createUserWithEmailAndPassword</span><span class="token punctuation">(</span>auth<span class="token punctuation">,</span> signInfo<span class="token punctuation">.</span><span class="token property-access">email</span><span class="token punctuation">,</span> signInfo<span class="token punctuation">.</span><span class="token property-access">password</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token property-access">user</span>
+      <span class="token function">setUser</span><span class="token punctuation">(</span>userData<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-void">void</span> <span class="token function">addUserInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword control-flow keyword-return">return</span> <span class="token punctuation">{</span>
+    user<span class="token punctuation">,</span>
+    signin<span class="token punctuation">,</span>
+    signout<span class="token punctuation">,</span>
+    signup
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><p>AuthProvider.tsx</p>
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">ReactNode</span> <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">&apos;react&apos;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> authContext<span class="token punctuation">,</span> useProvideAuth <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">&apos;./useAuth&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-const">const</span> <span class="token maybe-class-name">AuthProvider</span><span class="token operator">:</span> <span class="token maybe-class-name">React</span><span class="token punctuation">.</span><span class="token constant">FC</span><span class="token operator">&lt;</span><span class="token punctuation">{</span> children<span class="token operator">:</span> <span class="token maybe-class-name">ReactNode</span> <span class="token punctuation">}</span><span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> children <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> auth <span class="token operator">=</span> <span class="token function">useProvideAuth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword control-flow keyword-return">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>authContext.Provider</span> <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>auth<span class="token punctuation">}</span></span> <span class="token punctuation">&gt;</span></span>
+      <span class="token punctuation">{</span>children<span class="token punctuation">}</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>authContext.Provider</span><span class="token punctuation">&gt;</span></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword module keyword-export">export</span> <span class="token keyword module keyword-default">default</span> <span class="token maybe-class-name">AuthProvider</span><span class="token punctuation">;</span>
+</pre><p>providers/index.tsx</p>
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token keyword module keyword-import">import</span> type <span class="token punctuation">{</span> <span class="token constant">FC</span><span class="token punctuation">,</span> <span class="token maybe-class-name">PropsWithChildren</span> <span class="token punctuation">}</span> <span class="token keyword module keyword-from">from</span> <span class="token string">&apos;react&apos;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token maybe-class-name">AuthProvider</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">&apos;@/stores/auth/AuthProvider&apos;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token maybe-class-name">EventResourcesProvider</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">&apos;@/stores/eventResources/EventResourcesProvider&apos;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">AdapterDateFns</span> <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">&apos;@mui/x-date-pickers/AdapterDateFns&apos;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">LocalizationProvider</span> <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">&apos;@mui/x-date-pickers/LocalizationProvider&apos;</span>
+
+<span class="token keyword keyword-const">const</span> <span class="token maybe-class-name">Providers</span><span class="token operator">:</span> <span class="token constant">FC</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PropsWithChildren</span></span><span class="token punctuation">&gt;</span></span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> children <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">AuthProvider</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">EventResourcesProvider</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">LocalizationProvider</span></span> <span class="token attr-name">dateAdapter</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token maybe-class-name">AdapterDateFns</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token punctuation">{</span>children<span class="token punctuation">}</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">LocalizationProvider</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">EventResourcesProvider</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">AuthProvider</span></span><span class="token punctuation">&gt;</span></span>
+
+<span class="token keyword module keyword-export">export</span> <span class="token keyword module keyword-default">default</span> <span class="token maybe-class-name">Providers</span>
+</pre><p>&#x57FA;&#x672C;&#x7684;&#x306A;&#x4F5C;&#x308A;&#x306F;&#x30A4;&#x30D9;&#x30F3;&#x30C8;&#x306E;&#x30B3;&#x30F3;&#x30C6;&#x30AD;&#x30B9;&#x30C8;&#x3068;&#x540C;&#x3058;&#x3067;&#x3059;&#x3002;&#x6CE8;&#x76EE;&#x70B9;&#x306F;firebase&#x304B;&#x3089;import&#x3057;&#x3066;&#x3044;&#x308B;&#x95A2;&#x6570;&#x3067;&#x3001;&#x307E;&#x305A;&#x300C;<strong>getAuth</strong>&#x300D;&#x3067;Firebase&#x304B;&#x3089;&#x63D0;&#x4F9B;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x8A8D;&#x8A3C;&#x60C5;&#x5831;&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x3092;&#x4F5C;&#x6210;&#x3057;&#x3001;&#x300C;<strong>createUserWithEmailAndPassword</strong>&#x300D;&#x300C;<strong>signInWithEmailAndPassword</strong>&#x300D;&#x306B;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x30FB;&#x30E1;&#x30FC;&#x30EB;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x30FB;&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x3092;&#x5F15;&#x6570;&#x306B;&#x8A2D;&#x5B9A;&#x3057;&#x3066;&#x5B9F;&#x884C;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x3001;&#x30A2;&#x30AB;&#x30A6;&#x30F3;&#x30C8;&#x306E;&#x767B;&#x9332;&#x3001;&#x307E;&#x305F;&#x306F;&#x30ED;&#x30B0;&#x30A4;&#x30F3;&#x60C5;&#x5831;&#x3092;&#x53D6;&#x5F97;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;<br>
+&#x81EA;&#x5206;&#x3067;fetch API&#x306A;&#x3069;&#x3092;&#x4F7F;&#x7528;&#x3057;&#x3066;&#x30B5;&#x30FC;&#x30D0;&#x30FC;&#x901A;&#x4FE1;&#x51E6;&#x7406;&#x3092;&#x8A18;&#x8F09;&#x305B;&#x305A;&#x3001;&#x95A2;&#x6570;&#x3092;&#x547C;&#x3073;&#x51FA;&#x3059;&#x3060;&#x3051;&#x3067;API&#x901A;&#x4FE1;&#x304C;&#x884C;&#x3048;&#x308B;&#x306E;&#x306F;&#x304B;&#x306A;&#x308A;&#x4FBF;&#x5229;&#x3067;&#x3059;&#x306D;&#x3002;</p>
+<p>&#x3067;&#x306F;&#x6700;&#x5F8C;&#x306B;&#x753B;&#x9762;&#x306E;&#x4FEE;&#x6B63;&#x3092;&#x884C;&#x3044;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;&#x300C;features/Top&#x300D;&#x914D;&#x4E0B;&#x306B;&#x300C;Auth&#x300D;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x3092;&#x4F5C;&#x6210;&#x3057;&#x3001;&#x300C;Auth.tsx&#x300D;&#x300C;Auth.module.scss&#x300D;&#x3092;&#x4F5C;&#x6210;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> useState <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">&apos;react&apos;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">Box</span><span class="token punctuation">,</span> <span class="token maybe-class-name">Button</span><span class="token punctuation">,</span> <span class="token maybe-class-name">TextField</span><span class="token punctuation">,</span> <span class="token maybe-class-name">Typography</span> <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">&apos;@mui/material&apos;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports">styles</span> <span class="token keyword module keyword-from">from</span> <span class="token string">&apos;./Auth.module.scss&apos;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> useAuth <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">&apos;@/stores/auth/useAuth&apos;</span>
+
+<span class="token keyword keyword-const">const</span> labelItems <span class="token operator">=</span> <span class="token punctuation">{</span>
+  signIn<span class="token operator">:</span> <span class="token punctuation">{</span>
+    title<span class="token operator">:</span> <span class="token string">&apos;Sign In Page&apos;</span><span class="token punctuation">,</span>
+    button<span class="token operator">:</span> <span class="token string">&apos;Sign In&apos;</span><span class="token punctuation">,</span>
+    changeButton<span class="token operator">:</span> <span class="token string">&apos;&#x30A2;&#x30AB;&#x30A6;&#x30F3;&#x30C8;&#x767B;&#x9332;&#x306F;&#x3053;&#x3061;&#x3089;&apos;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  signUp<span class="token operator">:</span> <span class="token punctuation">{</span>
+    title<span class="token operator">:</span> <span class="token string">&apos;Sign Up Page&apos;</span><span class="token punctuation">,</span>
+    button<span class="token operator">:</span> <span class="token string">&apos;Sign Up&apos;</span><span class="token punctuation">,</span>
+    changeButton<span class="token operator">:</span> <span class="token string">&apos;&#x30B5;&#x30A4;&#x30F3;&#x30A4;&#x30F3;&#x306F;&#x3053;&#x3061;&#x3089;&apos;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-const">const</span> <span class="token maybe-class-name">Auth</span><span class="token operator">:</span> <span class="token maybe-class-name">React</span><span class="token punctuation">.</span><span class="token method-variable function-variable method function property-access"><span class="token maybe-class-name">FC</span></span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> <span class="token punctuation">[</span>displayType<span class="token punctuation">,</span> setDisplayType<span class="token punctuation">]</span> <span class="token operator">=</span> useState<span class="token operator">&lt;</span><span class="token string">&apos;signIn&apos;</span> <span class="token operator">|</span> <span class="token string">&apos;signUp&apos;</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token string">&apos;signIn&apos;</span><span class="token punctuation">)</span>
+  <span class="token keyword keyword-const">const</span> <span class="token punctuation">[</span>email<span class="token punctuation">,</span> setEmail<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">&apos;&apos;</span><span class="token punctuation">)</span>
+  <span class="token keyword keyword-const">const</span> <span class="token punctuation">[</span>password<span class="token punctuation">,</span> setPassword<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">&apos;&apos;</span><span class="token punctuation">)</span>
+  <span class="token keyword keyword-const">const</span> <span class="token punctuation">[</span>passwordForCheck<span class="token punctuation">,</span> setPasswordForCheck<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">&apos;&apos;</span><span class="token punctuation">)</span>
+
+  <span class="token keyword keyword-const">const</span> <span class="token punctuation">{</span> signin<span class="token punctuation">,</span> signup <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useAuth</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+  <span class="token keyword keyword-const">const</span> <span class="token function-variable function">onSubmitButtonClicked</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>email <span class="token operator">||</span> <span class="token operator">!</span>password<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">&apos;&#x30E1;&#x30FC;&#x30EB;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x3068;&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x3092;&#x5165;&#x529B;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&apos;</span><span class="token punctuation">)</span>
+
+      <span class="token keyword control-flow keyword-return">return</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>displayType <span class="token operator">===</span> <span class="token string">&apos;signIn&apos;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">signin</span><span class="token punctuation">(</span><span class="token punctuation">{</span> email<span class="token punctuation">,</span> password <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+      <span class="token keyword control-flow keyword-return">return</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>password <span class="token operator">!==</span> passwordForCheck<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">&apos;&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x304C;&#x4E00;&#x81F4;&#x3057;&#x307E;&#x305B;&#x3093;&apos;</span><span class="token punctuation">)</span>
+
+      <span class="token keyword control-flow keyword-return">return</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">signup</span><span class="token punctuation">(</span><span class="token punctuation">{</span> email<span class="token punctuation">,</span> password <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword keyword-const">const</span> <span class="token function-variable function">onTypeChangeButtonClicked</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    displayType <span class="token operator">===</span> <span class="token string">&apos;signIn&apos;</span> <span class="token operator">?</span> <span class="token function">setDisplayType</span><span class="token punctuation">(</span><span class="token string">&apos;signUp&apos;</span><span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token function">setDisplayType</span><span class="token punctuation">(</span><span class="token string">&apos;signIn&apos;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword control-flow keyword-return">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Typography</span></span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&apos;</span>h1<span class="token punctuation">&apos;</span></span> <span class="token attr-name">fontSize</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token number">40</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>labelItems<span class="token punctuation">[</span>displayType<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token property-access">title</span><span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Typography</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Box</span></span> <span class="token attr-name">display</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>flex<span class="token punctuation">&quot;</span></span> <span class="token attr-name">gap</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">}</span></span> <span class="token attr-name">flexDirection</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>column<span class="token punctuation">&quot;</span></span> <span class="token attr-name">margin</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>20px 30px;<span class="token punctuation">&quot;</span></span> <span class="token attr-name">textAlign</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>center<span class="token punctuation">&quot;</span></span> <span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Box</span></span> <span class="token attr-name">display</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>flex<span class="token punctuation">&quot;</span></span> <span class="token attr-name">alignItems</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>center<span class="token punctuation">&quot;</span></span> <span class="token attr-name">justifyContent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>center<span class="token punctuation">&quot;</span></span> <span class="token attr-name">textAlign</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>left<span class="token punctuation">&quot;</span></span> <span class="token attr-name">gap</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">[</span><span class="token string">&apos;input-label&apos;</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span> <span class="token attr-name">htmlFor</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&apos;</span>title<span class="token punctuation">&apos;</span></span><span class="token punctuation">&gt;</span></span>&#x30E1;&#x30FC;&#x30EB;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#xFF1A; <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">TextField</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&apos;</span>email<span class="token punctuation">&apos;</span></span> <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>email<span class="token punctuation">}</span></span> <span class="token attr-name">onChange</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token function">setEmail</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span><span class="token property-access">currentTarget</span><span class="token punctuation">.</span><span class="token property-access">value</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Box</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Box</span></span> <span class="token attr-name">display</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>flex<span class="token punctuation">&quot;</span></span> <span class="token attr-name">alignItems</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>center<span class="token punctuation">&quot;</span></span> <span class="token attr-name">justifyContent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>center<span class="token punctuation">&quot;</span></span> <span class="token attr-name">gap</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">[</span><span class="token string">&apos;input-label&apos;</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span> <span class="token attr-name">htmlFor</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&apos;</span>title<span class="token punctuation">&apos;</span></span><span class="token punctuation">&gt;</span></span>&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#xFF1A; <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">TextField</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&apos;</span>password<span class="token punctuation">&apos;</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&apos;</span>password<span class="token punctuation">&apos;</span></span> <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>password<span class="token punctuation">}</span></span> <span class="token attr-name">onChange</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token function">setPassword</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span><span class="token property-access">currentTarget</span><span class="token punctuation">.</span><span class="token property-access">value</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Box</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token punctuation">{</span><span class="token punctuation">(</span>displayType <span class="token operator">===</span> <span class="token string">&apos;signUp&apos;</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Box</span></span> <span class="token attr-name">display</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>flex<span class="token punctuation">&quot;</span></span> <span class="token attr-name">alignItems</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>center<span class="token punctuation">&quot;</span></span> <span class="token attr-name">justifyContent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>center<span class="token punctuation">&quot;</span></span> <span class="token attr-name">gap</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">[</span><span class="token string">&apos;input-label&apos;</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span> <span class="token attr-name">htmlFor</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&apos;</span>title<span class="token punctuation">&apos;</span></span><span class="token punctuation">&gt;</span></span>&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#xFF1A; <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">TextField</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&apos;</span>passwordForCheck<span class="token punctuation">&apos;</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&apos;</span>password<span class="token punctuation">&apos;</span></span> <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>passwordForCheck<span class="token punctuation">}</span></span> <span class="token attr-name">onChange</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token function">setPasswordForCheck</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span><span class="token property-access">currentTarget</span><span class="token punctuation">.</span><span class="token property-access">value</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Box</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Box</span></span> <span class="token attr-name">display</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>flex<span class="token punctuation">&quot;</span></span> <span class="token attr-name">flexDirection</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>column<span class="token punctuation">&quot;</span></span> <span class="token attr-name">alignItems</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>center<span class="token punctuation">&quot;</span></span> <span class="token attr-name">margin</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">}</span></span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">[</span><span class="token string">&apos;submit-button-content&apos;</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Button</span></span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&apos;</span>contained<span class="token punctuation">&apos;</span></span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">[</span><span class="token string">&apos;submit-button&apos;</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>onSubmitButtonClicked<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token punctuation">{</span>labelItems<span class="token punctuation">[</span>displayType<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token property-access">button</span><span class="token punctuation">}</span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Button</span></span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Button</span></span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>onTypeChangeButtonClicked<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token punctuation">{</span>labelItems<span class="token punctuation">[</span>displayType<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token property-access">changeButton</span><span class="token punctuation">}</span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Button</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Box</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Box</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword module keyword-export">export</span> <span class="token keyword module keyword-default">default</span> <span class="token maybe-class-name">Auth</span>
+
+</pre><pre data-role="codeBlock" data-info="scss" class="language-scss"><span class="token selector">.submit-button-content </span><span class="token punctuation">{</span>
+  <span class="token selector">button </span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> fit-content<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">.submit-button </span><span class="token punctuation">{</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token unit">rem</span><span class="token punctuation">;</span>
+    <span class="token property">text-transform</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.input-label </span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">150</span><span class="token unit">px</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><p>&#x6700;&#x5F8C;&#x306B;&#x300C;TopPage.tsx&#x300D;&#x3092;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x4FEE;&#x6B63;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> useState <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">&apos;react&apos;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">DateSelectArg</span> <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">&apos;@fullcalendar/core&apos;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">EventImpl</span> <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">&apos;@fullcalendar/core/internal&apos;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports">jaLocale</span> <span class="token keyword module keyword-from">from</span> <span class="token string">&apos;@fullcalendar/core/locales/ja&apos;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports">dayGridPlugin</span> <span class="token keyword module keyword-from">from</span> <span class="token string">&apos;@fullcalendar/daygrid&apos;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports">interactionPlugin</span> <span class="token keyword module keyword-from">from</span> <span class="token string">&apos;@fullcalendar/interaction&apos;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token maybe-class-name">FullCalendar</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">&apos;@fullcalendar/react&apos;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports">timeGridPlugin</span> <span class="token keyword module keyword-from">from</span> <span class="token string">&apos;@fullcalendar/timegrid&apos;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">Box</span><span class="token punctuation">,</span> <span class="token maybe-class-name">Typography</span> <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">&apos;@mui/material&apos;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token maybe-class-name">Auth</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">&apos;./Auth/Auth&apos;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports">useEventModal</span> <span class="token keyword module keyword-from">from</span> <span class="token string">&apos;./Modal/useEventModal&apos;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports">styles</span> <span class="token keyword module keyword-from">from</span> <span class="token string">&apos;./TopPage.module.scss&apos;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> useAuth <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">&apos;@/stores/auth/useAuth&apos;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> useEventResources <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">&apos;@/stores/eventResources/useEventResources&apos;</span>
+
+<span class="token keyword keyword-const">const</span> <span class="token maybe-class-name">TopPage</span><span class="token operator">:</span> <span class="token maybe-class-name">React</span><span class="token punctuation">.</span><span class="token method-variable function-variable method function property-access"><span class="token maybe-class-name">FC</span></span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> <span class="token punctuation">{</span> user <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useAuth</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword keyword-const">const</span> <span class="token punctuation">{</span> eventResouces <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useEventResources</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword keyword-const">const</span> <span class="token punctuation">[</span>targetAddEvent<span class="token punctuation">,</span> setTargetAddEvent<span class="token punctuation">]</span> <span class="token operator">=</span> useState<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">DateSelectArg</span></span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword keyword-const">const</span> <span class="token punctuation">[</span>targetEditEvent<span class="token punctuation">,</span> setTargetEditEvent<span class="token punctuation">]</span> <span class="token operator">=</span> useState<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">EventImpl</span></span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+  <span class="token keyword keyword-const">const</span> <span class="token punctuation">{</span> <span class="token maybe-class-name">EventModal</span><span class="token operator">:</span> <span class="token maybe-class-name">AddEventModal</span><span class="token punctuation">,</span> open<span class="token operator">:</span> openAddModal <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useEventModal</span><span class="token punctuation">(</span><span class="token punctuation">{</span> modalType<span class="token operator">:</span> <span class="token string">&apos;add&apos;</span><span class="token punctuation">,</span> targetAddEvent <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token keyword keyword-const">const</span> <span class="token punctuation">{</span> <span class="token maybe-class-name">EventModal</span><span class="token operator">:</span> <span class="token maybe-class-name">EditEventModal</span><span class="token punctuation">,</span> open<span class="token operator">:</span> openEditModal <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useEventModal</span><span class="token punctuation">(</span><span class="token punctuation">{</span> modalType<span class="token operator">:</span> <span class="token string">&apos;edit&apos;</span><span class="token punctuation">,</span> targetEditEvent <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  <span class="token keyword keyword-const">const</span> <span class="token function-variable function">onDateTimeSelected</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">arg<span class="token operator">:</span> <span class="token maybe-class-name">DateSelectArg</span></span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">setTargetAddEvent</span><span class="token punctuation">(</span>arg<span class="token punctuation">)</span>
+    <span class="token function">openAddModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword keyword-const">const</span> <span class="token function-variable function">onEventClicked</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">arg<span class="token operator">:</span> <span class="token maybe-class-name">EventImpl</span></span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">setTargetEditEvent</span><span class="token punctuation">(</span>arg<span class="token punctuation">)</span>
+    <span class="token function">openEditModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword control-flow keyword-return">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token punctuation">{</span>user <span class="token operator">===</span> <span class="token keyword null nil keyword-null">null</span> <span class="token operator">?</span> <span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Auth</span></span> <span class="token punctuation">/&gt;</span></span>
+      <span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span></span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Box</span></span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">[</span><span class="token string">&apos;content&apos;</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Typography</span></span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&apos;</span>h1<span class="token punctuation">&apos;</span></span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">[</span><span class="token string">&apos;title&apos;</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token maybe-class-name">Top</span> <span class="token maybe-class-name">Page</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Typography</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">AddEventModal</span></span> <span class="token punctuation">/&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">EditEventModal</span></span> <span class="token punctuation">/&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">FullCalendar</span></span>
+              <span class="token attr-name">headerToolbar</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+                left<span class="token operator">:</span> <span class="token string">&apos;title timeGridWeek dayGridMonth&apos;</span><span class="token punctuation">,</span>
+                right<span class="token operator">:</span> <span class="token string">&apos;today prev,next&apos;</span>
+              <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+              <span class="token attr-name">buttonText</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+                week<span class="token operator">:</span> <span class="token string">&apos;week&apos;</span><span class="token punctuation">,</span>
+                month<span class="token operator">:</span> <span class="token string">&apos;month&apos;</span>
+              <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+              <span class="token attr-name">events</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>eventResouces<span class="token punctuation">}</span></span>
+              <span class="token attr-name">initialView</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>timeGridWeek<span class="token punctuation">&quot;</span></span>
+              <span class="token attr-name">locale</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&apos;</span>ja<span class="token punctuation">&apos;</span></span>
+              <span class="token attr-name">locales</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">[</span>jaLocale<span class="token punctuation">]</span><span class="token punctuation">}</span></span>
+              <span class="token attr-name">plugins</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">[</span>timeGridPlugin<span class="token punctuation">,</span> dayGridPlugin<span class="token punctuation">,</span> interactionPlugin<span class="token punctuation">]</span><span class="token punctuation">}</span></span>
+              <span class="token attr-name">scrollTime</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token keyword null nil keyword-null">null</span><span class="token punctuation">}</span></span>
+              <span class="token attr-name">select</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter">arg</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token function">onDateTimeSelected</span><span class="token punctuation">(</span>arg<span class="token punctuation">)</span><span class="token punctuation">}</span></span>
+              <span class="token attr-name">selectable</span>
+              <span class="token attr-name">eventClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter">arg</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token function">onEventClicked</span><span class="token punctuation">(</span>arg<span class="token punctuation">.</span><span class="token property-access">event</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span>
+            <span class="token punctuation">/&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Box</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token punctuation">)</span><span class="token punctuation">}</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword module keyword-export">export</span> <span class="token keyword module keyword-default">default</span> <span class="token maybe-class-name">TopPage</span>
+</pre><p>&#x3059;&#x308B;&#x3068;&#x521D;&#x671F;&#x8868;&#x793A;&#x753B;&#x9762;&#x304C;&#x30ED;&#x30B0;&#x30A4;&#x30F3;&#x753B;&#x9762;&#x306B;&#x5207;&#x308A;&#x66FF;&#x308F;&#x308A;&#x3001;&#x30A2;&#x30AB;&#x30A6;&#x30F3;&#x30C8;&#x767B;&#x9332;&#x3001;&#x307E;&#x305F;&#x306F;&#x30ED;&#x30B0;&#x30A4;&#x30F3;&#x3059;&#x308B;&#x3068;&#x5148;&#x307B;&#x3069;&#x306E;TopPage&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308B;&#x304B;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<p><img src="./images/SignInPage.png" alt="Sign-In-Page"></p>
+<br>
+<h3 class="mume-header" id="-db%E7%99%BB%E9%8C%B2%E5%87%A6%E7%90%86%E3%81%AE%E5%AE%9F%E8%A3%85-">DB&#x767B;&#x9332;&#x51E6;&#x7406;&#x306E;&#x5B9F;&#x88C5;</h3>
+
+<p>&#x9577;&#x304B;&#x3063;&#x305F;Reactstini&#x3082;&#x3053;&#x308C;&#x3067;&#x6700;&#x5F8C;&#x306E;&#x5DE5;&#x7A0B;&#x3067;&#x3059;&#x3002;DB&#x767B;&#x9332;&#x51E6;&#x7406;&#x3092;&#x5B9F;&#x88C5;&#x3057;&#x3066;&#x3044;&#x304D;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
+<p>&#x521D;&#x671F;&#x8A2D;&#x5B9A;&#x6642;&#x306B;&#x5C11;&#x3057;&#x89E6;&#x308C;&#x307E;&#x3057;&#x305F;&#x304C;&#x3001;Firebase&#x306B;&#x306F;&#x300C;<strong>Cloud Firestore</strong>&#x300D;&#x3068;&#x3044;&#x3046;&#x30C7;&#x30FC;&#x30BF;&#x30D9;&#x30FC;&#x30B9;&#x304C;&#x5B58;&#x5728;&#x3057;&#x4E00;&#x5B9A;&#x306E;&#x30C7;&#x30FC;&#x30BF;&#x91CF;&#x3067;&#x3042;&#x308C;&#x3070;&#x7121;&#x6599;&#x3067;&#x4F7F;&#x7528;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;&#x3053;&#x306E;&#x30C7;&#x30FC;&#x30BF;&#x30D9;&#x30FC;&#x30B9;&#x306F;&#x300C;<strong>&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;&#x6307;&#x5411;&#x30C7;&#x30FC;&#x30BF;&#x30D9;&#x30FC;&#x30B9;</strong>&#x300D;&#x306E;&#x305F;&#x3081;&#x3001;MySQL&#x3084;Oracle&#x306E;&#x3088;&#x3046;&#x306A;&#x300C;<strong>&#x30EA;&#x30EC;&#x30FC;&#x30B7;&#x30E7;&#x30CA;&#x30EB;&#x30C7;&#x30FC;&#x30BF;&#x30D9;&#x30FC;&#x30B9;</strong>&#x300D;&#x3068;&#x306F;&#x7570;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;&#x8A73;&#x3057;&#x304F;&#x306F;<a href="https://firebase.google.com/docs/firestore/data-model?hl=ja&amp;authuser=1">&#x3053;&#x3061;&#x3089;</a>&#x3092;&#x53C2;&#x8003;&#x306B;&#x7406;&#x89E3;&#x3092;&#x6DF1;&#x3081;&#x3066;&#x9802;&#x3051;&#x308C;&#x3070;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x304C;&#x3001;Javascript&#x3067;&#x6271;&#x3046;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3068;&#x540C;&#x3058;&#x3088;&#x3046;&#x306A;&#x69CB;&#x9020;&#x3092;&#x53D6;&#x308B;&#x3068;&#x8003;&#x3048;&#x308B;&#x3068;&#x7406;&#x89E3;&#x3057;&#x3084;&#x3059;&#x3044;&#x304B;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<p>&#x4ECA;&#x56DE;&#x306E;&#x4FEE;&#x6B63;&#x306F;&#x300C;stores/eventResources/useEventResources.tsx&#x300D;&#x306E;&#x307F;&#x3067;&#x3059;&#x3002;</p>
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> createContext<span class="token punctuation">,</span> useContext<span class="token punctuation">,</span> useEffect<span class="token punctuation">,</span> useState <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">&apos;react&apos;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> doc<span class="token punctuation">,</span> <span class="token maybe-class-name">DocumentData</span><span class="token punctuation">,</span> getDoc<span class="token punctuation">,</span> <span class="token maybe-class-name">QueryDocumentSnapshot</span><span class="token punctuation">,</span> setDoc<span class="token punctuation">,</span> <span class="token maybe-class-name">SnapshotOptions</span><span class="token punctuation">,</span> <span class="token maybe-class-name">Timestamp</span> <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">&apos;firebase/firestore&apos;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> useAuth <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">&apos;../auth/useAuth&apos;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> db <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">&apos;@/firebase&apos;</span>
+
+type <span class="token maybe-class-name">EventResouce</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  id<span class="token operator">?</span><span class="token operator">:</span> string
+  title<span class="token operator">:</span> string
+  start<span class="token operator">:</span> <span class="token known-class-name class-name">Date</span>
+  end<span class="token operator">:</span> <span class="token known-class-name class-name">Date</span>
+<span class="token punctuation">}</span>
+type <span class="token maybe-class-name">UseProviderEventResources</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  eventResouces<span class="token operator">:</span> <span class="token maybe-class-name">EventResouce</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token function-variable function">addEventResouce</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">values<span class="token operator">:</span> <span class="token maybe-class-name">EventResouce</span></span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token keyword keyword-void">void</span>
+  <span class="token function-variable function">editEventResouce</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">values<span class="token operator">:</span> <span class="token maybe-class-name">EventResouce</span></span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token keyword keyword-void">void</span>
+  <span class="token function-variable function">deleteEventResource</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">id<span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token keyword keyword-void">void</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-const">const</span> initialState<span class="token operator">:</span> <span class="token maybe-class-name">UseProviderEventResources</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  eventResouces<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">addEventResouce</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">editEventResouce</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">deleteEventResource</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * &#x30B3;&#x30F3;&#x30C6;&#x30AF;&#x30B9;&#x30C8;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;
+ */</span>
+<span class="token keyword module keyword-export">export</span> <span class="token keyword keyword-const">const</span> eventContext <span class="token operator">=</span> <span class="token function">createContext</span><span class="token punctuation">(</span>initialState<span class="token punctuation">)</span>
+
+<span class="token comment">/**
+ * &#x30B3;&#x30F3;&#x30C6;&#x30AF;&#x30B9;&#x30C8;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x73FE;&#x5728;&#x5024;&#x3092;&#x8FD4;&#x3059;&#x30D5;&#x30C3;&#x30AF;
+ */</span>
+<span class="token keyword module keyword-export">export</span> <span class="token keyword keyword-const">const</span> useEventResources <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token parameter"><span class="token maybe-class-name">UseProviderEventResources</span></span> <span class="token arrow operator">=&gt;</span> <span class="token function">useContext</span><span class="token punctuation">(</span>eventContext<span class="token punctuation">)</span>
+
+<span class="token comment">/**
+ * &#x578B;&#x6574;&#x5408;&#x7528;Converter&#x5B9A;&#x7FA9;
+ */</span>
+type <span class="token maybe-class-name">EventResouceDoc</span> <span class="token operator">=</span> <span class="token maybe-class-name">Omit</span><span class="token operator">&lt;</span><span class="token maybe-class-name">EventResouce</span><span class="token punctuation">,</span> <span class="token string">&apos;start | end&apos;</span><span class="token operator">&gt;</span> <span class="token operator">&amp;</span> <span class="token punctuation">{</span>
+  start<span class="token operator">:</span> <span class="token maybe-class-name">Timestamp</span>
+  end<span class="token operator">:</span> <span class="token maybe-class-name">Timestamp</span>
+<span class="token punctuation">}</span>
+type <span class="token maybe-class-name">EventDataWrapper</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">T</span></span><span class="token punctuation">&gt;</span></span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  eventResources<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+type <span class="token maybe-class-name">EventConverter</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  toFirestore<span class="token operator">:</span> <span class="token punctuation">(</span>data<span class="token operator">:</span> <span class="token maybe-class-name">EventDataWrapper</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">EventResouce</span></span><span class="token punctuation">&gt;</span></span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token maybe-class-name">DocumentData</span>
+  fromFirestore<span class="token operator">:</span> <span class="token punctuation">(</span>snapshot<span class="token operator">:</span> <span class="token maybe-class-name">QueryDocumentSnapshot</span><span class="token operator">&lt;</span><span class="token maybe-class-name">EventDataWrapper</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">EventResouceDoc</span></span><span class="token punctuation">&gt;</span></span><span class="token operator">&gt;</span><span class="token punctuation">,</span> options<span class="token operator">:</span> <span class="token maybe-class-name">SnapshotOptions</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token maybe-class-name">EventDataWrapper</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">EventResouce</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token punctuation">}</span>
+<span class="token keyword keyword-const">const</span> eventConverter <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token parameter"><span class="token maybe-class-name">EventConverter</span></span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function-variable function">toFirestore</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> data<span class="token punctuation">,</span>
+  <span class="token function-variable function">fromFirestore</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">snapshot<span class="token punctuation">,</span> options</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-const">const</span> eventDatas<span class="token operator">:</span> <span class="token maybe-class-name">EventResouce</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> snapshot<span class="token punctuation">.</span><span class="token method function property-access">data</span><span class="token punctuation">(</span>options<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token property-access">eventResources</span><span class="token punctuation">.</span><span class="token method function property-access">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token spread operator">...</span>item<span class="token punctuation">,</span>
+      start<span class="token operator">:</span> item<span class="token punctuation">.</span><span class="token property-access">start</span><span class="token punctuation">.</span><span class="token method function property-access">toDate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      end<span class="token operator">:</span> item<span class="token punctuation">.</span><span class="token property-access">end</span><span class="token punctuation">.</span><span class="token method function property-access">toDate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token keyword control-flow keyword-return">return</span> <span class="token punctuation">{</span>
+      eventResources<span class="token operator">:</span> eventDatas
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword module keyword-export">export</span> <span class="token keyword keyword-const">const</span> useProviderEventResources <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token parameter"><span class="token maybe-class-name">UseProviderEventResources</span></span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> <span class="token punctuation">[</span>eventResources<span class="token punctuation">,</span> setEventResources<span class="token punctuation">]</span> <span class="token operator">=</span> useState<span class="token operator">&lt;</span><span class="token maybe-class-name">EventResouce</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token keyword keyword-const">const</span> <span class="token punctuation">[</span>isGetEventResouces<span class="token punctuation">,</span> setIsGetEventResources<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span>
+  <span class="token keyword keyword-const">const</span> <span class="token punctuation">{</span> user <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useAuth</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+  <span class="token keyword keyword-const">const</span> rootDocRef <span class="token operator">=</span> user <span class="token operator">?</span> <span class="token function">doc</span><span class="token punctuation">(</span>db<span class="token punctuation">,</span> <span class="token string">&apos;eventResources&apos;</span><span class="token punctuation">,</span> user<span class="token punctuation">.</span><span class="token property-access">uid</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">withConverter</span><span class="token punctuation">(</span><span class="token function">eventConverter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token keyword null nil keyword-null">null</span>
+
+  <span class="token comment">/**
+   * &#x30A4;&#x30D9;&#x30F3;&#x30C8;&#x30C7;&#x30FC;&#x30BF;&#x53D6;&#x5F97;&#x51E6;&#x7406;
+   */</span>
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-const">const</span> <span class="token function-variable function">getEventResources</span> <span class="token operator">=</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>rootDocRef<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-const">const</span> eventResourcesDocData <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword control-flow keyword-await">await</span> <span class="token function">getDoc</span><span class="token punctuation">(</span>rootDocRef<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        eventResourcesDocData<span class="token operator">?.</span>eventResources <span class="token operator">&amp;&amp;</span> <span class="token function">setEventResources</span><span class="token punctuation">(</span>eventResourcesDocData<span class="token punctuation">.</span><span class="token property-access">eventResources</span><span class="token punctuation">)</span>
+        <span class="token function">setIsGetEventResources</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>isGetEventResouces<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword keyword-void">void</span> <span class="token function">getEventResources</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>user<span class="token punctuation">,</span> setEventResources<span class="token punctuation">,</span> isGetEventResouces<span class="token punctuation">,</span> setIsGetEventResources<span class="token punctuation">,</span> rootDocRef<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+  <span class="token comment">/**
+   * &#x767B;&#x9332;&#x51E6;&#x7406;
+   * @param event
+   */</span>
+  <span class="token keyword keyword-const">const</span> <span class="token function-variable function">addEventResouce</span> <span class="token operator">=</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token parameter">event<span class="token operator">:</span> <span class="token maybe-class-name">EventResouce</span></span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>rootDocRef<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword keyword-const">const</span> id <span class="token operator">=</span> <span class="token known-class-name class-name">Math</span><span class="token punctuation">.</span><span class="token method function property-access">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toString</span><span class="token punctuation">(</span><span class="token number">32</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">substring</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+
+      <span class="token keyword control-flow keyword-await">await</span> <span class="token function">setDoc</span><span class="token punctuation">(</span>rootDocRef<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        eventResources<span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token spread operator">...</span>eventResources<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+            <span class="token spread operator">...</span>event<span class="token punctuation">,</span>
+            id
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+      <span class="token comment">// &#x30C7;&#x30FC;&#x30BF;&#x518D;&#x53D6;&#x5F97;</span>
+      <span class="token function">setIsGetEventResources</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">/**
+   * &#x66F4;&#x65B0;&#x51E6;&#x7406;
+   * @param event
+   */</span>
+  <span class="token keyword keyword-const">const</span> <span class="token function-variable function">editEventResouce</span> <span class="token operator">=</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token parameter">event<span class="token operator">:</span> <span class="token maybe-class-name">EventResouce</span></span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>rootDocRef<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword keyword-const">const</span> data <span class="token operator">=</span> eventResources<span class="token punctuation">.</span><span class="token method function property-access">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> item<span class="token punctuation">.</span><span class="token property-access">id</span> <span class="token operator">===</span> event<span class="token punctuation">.</span><span class="token property-access">id</span> <span class="token operator">?</span> event <span class="token operator">:</span> item<span class="token punctuation">)</span>
+
+      <span class="token keyword control-flow keyword-await">await</span> <span class="token function">setDoc</span><span class="token punctuation">(</span>rootDocRef<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        eventResources<span class="token operator">:</span> data
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+      <span class="token comment">// &#x30C7;&#x30FC;&#x30BF;&#x518D;&#x53D6;&#x5F97;</span>
+      <span class="token function">setIsGetEventResources</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">/**
+   * &#x524A;&#x9664;&#x51E6;&#x7406;
+   * @param id
+   */</span>
+  <span class="token keyword keyword-const">const</span> <span class="token function-variable function">deleteEventResource</span> <span class="token operator">=</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token parameter">id<span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>rootDocRef<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword keyword-const">const</span> data <span class="token operator">=</span> eventResources<span class="token punctuation">.</span><span class="token method function property-access">filter</span><span class="token punctuation">(</span><span class="token parameter">item</span> <span class="token arrow operator">=&gt;</span> item<span class="token punctuation">.</span><span class="token property-access">id</span> <span class="token operator">!==</span> id<span class="token punctuation">)</span>
+
+      <span class="token keyword control-flow keyword-await">await</span> <span class="token function">setDoc</span><span class="token punctuation">(</span>rootDocRef<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        eventResources<span class="token operator">:</span> data
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+      <span class="token comment">// &#x30C7;&#x30FC;&#x30BF;&#x518D;&#x53D6;&#x5F97;</span>
+      <span class="token function">setIsGetEventResources</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword control-flow keyword-return">return</span> <span class="token punctuation">{</span>
+    eventResouces<span class="token operator">:</span> eventResources<span class="token punctuation">,</span>
+    addEventResouce<span class="token punctuation">,</span>
+    editEventResouce<span class="token punctuation">,</span>
+    deleteEventResource
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</pre><p>&#x307E;&#x305A;&#x8FFD;&#x52A0;&#x3055;&#x308C;&#x305F;&#x70B9;&#x3067;&#x306F;&#x300C;<strong>&#x578B;&#x6574;&#x5408;&#x7528;Converter</strong>&#x300D;&#x3067;&#x3059;&#x3002;Firestore&#x304B;&#x3089;&#x53D6;&#x5F97;&#x3059;&#x308B;&#x30C7;&#x30FC;&#x30BF;&#x3068;&#x3001;&#x753B;&#x9762;&#x4E0A;&#x3067;&#x767B;&#x9332;&#x3092;&#x884C;&#x3063;&#x305F;&#x30C7;&#x30FC;&#x30BF;&#x9593;&#x3067;&#x306F;<strong>&#x578B;&#x306B;&#x9F5F;&#x9F6C;&#x304C;&#x767A;&#x751F;&#x3059;&#x308B;&#x30B1;&#x30FC;&#x30B9;</strong>&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;&#x4ECA;&#x56DE;&#x3067;&#x306F;<strong>Date&#x578B;(&#x753B;&#x9762;)<strong>&#x3068;</strong>Timestamp&#x578B;(Firestore)<strong>&#x3067;&#x3059;&#x3002;&#x767B;&#x9332;&#x6642;&#x306B;&#x306F;Date&#x578B;&#x3092;&#x305D;&#x306E;&#x307E;&#x307E;&#x30EA;&#x30AF;&#x30A8;&#x30B9;&#x30C8;&#x3059;&#x308B;&#x3060;&#x3051;&#x3067;&#x554F;&#x984C;&#x306E;&#x3067;&#x3059;&#x304C;&#x3001;Firestore&#x5074;&#x3067;&#x81EA;&#x52D5;&#x7684;&#x306B;Timestamp&#x578B;&#x306B;&#x5909;&#x63DB;&#x3055;&#x308C;&#x3066;&#x3057;&#x307E;&#x3044;&#x3001;&#x30C7;&#x30FC;&#x30BF;&#x3092;&#x53D7;&#x3051;&#x53D6;&#x3063;&#x305F;&#x30C7;&#x30FC;&#x30BF;&#x305D;&#x306E;&#x307E;&#x307E;&#x4F7F;&#x7528;&#x3059;&#x308B;&#x3068;FullCalendar&#x3067;&#x8868;&#x793A;&#x3055;&#x308C;&#x306A;&#x3044;&#x3068;&#x3044;&#x3046;&#x4E0D;&#x5177;&#x5408;&#x304C;&#x767A;&#x751F;&#x3057;&#x3066;&#x3044;&#x307E;&#x3057;&#x307E;&#x3059;&#x3002;<br>
+&#x305D;&#x3053;&#x3067;</strong>Converter</strong>&#x306B;&#x3042;&#x3089;&#x304B;&#x3058;&#x3081;&#x5909;&#x63DB;&#x51E6;&#x7406;&#x3092;&#x8A18;&#x8F09;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x3001;&#x30C7;&#x30FC;&#x30BF;&#x53D6;&#x5F97;&#x6642;&#x306B;&#x753B;&#x9762;&#x7528;&#x306E;&#x578B;&#x306B;&#x5909;&#x63DB;&#x304C;&#x53EF;&#x80FD;&#x3067;&#x3001;&#x9F5F;&#x9F6C;&#x3092;&#x610F;&#x8B58;&#x305B;&#x305A;&#x306B;&#x30C7;&#x30FC;&#x30BF;&#x3092;&#x4F7F;&#x7528;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<p>&#x4ED6;&#x306E;&#x6A5F;&#x80FD;&#x306F;&#x57FA;&#x672C;&#x7684;&#x306B;&#x8A8D;&#x8A3C;&#x6A5F;&#x80FD;&#x3068;&#x540C;&#x3058;&#x6D41;&#x308C;&#x306B;&#x306A;&#x3063;&#x3066;&#x307E;&#x3059;&#x304C;&#x3001;useEffect&#x3092;&#x4F7F;&#x7528;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x30C7;&#x30FC;&#x30BF;&#x306E;&#x767B;&#x9332;&#x30FB;&#x66F4;&#x65B0;&#x30FB;&#x524A;&#x9664;&#x5B9F;&#x884C;&#x5F8C;&#x306B;&#x518D;&#x5EA6;&#x30C7;&#x30FC;&#x30BF;&#x3092;&#x53D6;&#x5F97;&#x3057;&#x3066;&#x540C;&#x671F;&#x304C;&#x53D6;&#x308C;&#x308B;&#x3088;&#x3046;&#x306B;&#x3057;&#x3066;&#x3044;&#x308B;&#x70B9;&#x3082;&#x30DD;&#x30A4;&#x30F3;&#x30C8;&#x3067;&#x3059;&#x3002;</p>
+<p>&#x3067;&#x306F;&#x3001;&#x52D5;&#x4F5C;&#x78BA;&#x8A8D;&#x3067;&#x3059;&#x3002;&#x554F;&#x984C;&#x306A;&#x304F;&#x767B;&#x9332;&#x30FB;&#x66F4;&#x65B0;&#x30FB;&#x524A;&#x9664;&#x304C;&#x78BA;&#x8A8D;&#x51FA;&#x6765;&#x305F;&#x3089;&#x3001;&#x518D;&#x5EA6;&#x30ED;&#x30B0;&#x30A4;&#x30F3;&#x753B;&#x9762;&#x304B;&#x3089;&#x30ED;&#x30B0;&#x30A4;&#x30F3;&#x3057;&#x306A;&#x304A;&#x3057;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;&#x5148;&#x307B;&#x3069;&#x64CD;&#x4F5C;&#x3057;&#x305F;&#x30C7;&#x30FC;&#x30BF;&#x304C;&#x305D;&#x306E;&#x307E;&#x307E;&#x8868;&#x793A;&#x3055;&#x308C;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x3063;&#x305F;&#x304B;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<p><img src="./images/achieve.png" alt="TopPage"></p>
+<br>
+<p>&#x3067;&#x306F;&#x6700;&#x5F8C;&#x306B;&#x30ED;&#x30B0;&#x30A4;&#x30F3;&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x306E;&#x307F;&#x304C;&#x30C7;&#x30FC;&#x30BF;&#x306E;&#x64CD;&#x4F5C;&#x3092;&#x884C;&#x3048;&#x308B;&#x3088;&#x3046;&#x306B;&#x30EB;&#x30FC;&#x30EB;&#x3092;&#x8A2D;&#x5B9A;&#x3057;&#x307E;&#x3059;&#x3002;Firebase&#x30B3;&#x30F3;&#x30BD;&#x30FC;&#x30EB;&#x304B;&#x3089;&#x300C;&#x30EB;&#x30FC;&#x30EB;&#x300D;&#x3092;&#x9078;&#x629E;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
+<p><img src="./images/firestore_rule.png" alt="Firestore-rule"></p>
+<p>&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;&#x306B;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x30EB;&#x30FC;&#x30EB;&#x3092;&#x8A2D;&#x5B9A;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
+<pre data-role="codeBlock" data-info="text" class="language-text">rules_version = &apos;2&apos;;
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{userId} {
+      allow create, read, update: if request.auth != null;
+    }
+    match /eventResources/{userId} {
+      allow create, read, update: if request.auth != null;
+    }
+  }
+}
+</pre><p>&#x8A2D;&#x5B9A;&#x304C;&#x5B8C;&#x4E86;&#x3057;&#x305F;&#x3089;&#x30C6;&#x30B9;&#x30C8;&#x3057;&#x3066;&#x898B;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;&#x6B04;&#x306E;&#x5DE6;&#x4E0B;&#x8FBA;&#x308A;&#x306E;&#x300C;&#x30EB;&#x30FC;&#x30EB; &#x30D7;&#x30EC;&#x30A4;&#x30B0;&#x30E9;&#x30A6;&#x30F3;&#x30C9;&#x300D;&#x3092;&#x958B;&#x304D;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x8A2D;&#x5B9A;&#x3057;&#x3001;&#x300C;&#x5B9F;&#x884C;&#x300D;&#x3092;&#x62BC;&#x4E0B;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
+<p>&#x30B7;&#x30DF;&#x30E5;&#x30EC;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x30BF;&#x30A4;&#x30D7;&#xFF1A;get<br>
+&#x5834;&#x6240;&#xFF1A;eventResources/{Authentication&#x304B;&#x3089;&#x78BA;&#x8A8D;&#x3067;&#x304D;&#x308B;&#x8A8D;&#x8A3C;&#x6E08;&#x307F;&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x306E;UID}<br>
+&#x8A8D;&#x8A3C;&#x6E08;&#x307F;&#xFF1A;&#x30C1;&#x30A7;&#x30C3;&#x30AF;</p>
+<p>&#x753B;&#x50CF;&#x306E;&#x3088;&#x3046;&#x306B;&#x8AAD;&#x307F;&#x53D6;&#x308A;&#x304C;&#x8A31;&#x53EF;&#x3055;&#x308C;&#x3066;&#x3044;&#x308C;&#x3070;&#x8A2D;&#x5B9A;&#x5B8C;&#x4E86;&#x3067;&#x3059;&#x3002;</p>
+<p><img src="./images/firestore_rule_confirm.png" alt="Firestore_rule_confirm"></p>
+<p>&#x4EE5;&#x4E0A;&#x3067;Firestore&#x306E;&#x8A2D;&#x5B9A;&#x306F;&#x5B8C;&#x4E86;&#x3067;&#x3059;&#x3002;</p>
+<br>
+<p>&#x5927;&#x5909;&#x3001;&#x304A;&#x75B2;&#x308C;&#x69D8;&#x3067;&#x3057;&#x305F;&#x3002;<br>
+&#x3053;&#x308C;&#x306B;&#x3066;Reactstini&#x306E;&#x5168;&#x5DE5;&#x7A0B;&#x4FEE;&#x4E86;&#x3067;&#x3059;&#x3002;</p>
+<p>&#x4ECA;&#x56DE;&#x306F;&#x30CF;&#x30E2;&#x30C8;&#x30E9;&#x306E;&#x3088;&#x3046;&#x306A;&#x57FA;&#x790E;&#x7684;&#x306A;&#x7814;&#x4FEE;&#x3068;&#x306F;&#x5C11;&#x3057;&#x9055;&#x3044;&#x3001;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x3092;&#x591A;&#x7528;&#x3057;&#x3066;&#x5C11;&#x3057;&#x3067;&#x3082;&#x73FE;&#x5834;&#x3067;&#x6D3B;&#x304B;&#x305B;&#x308B;&#x5185;&#x5BB9;&#x306B;&#x3057;&#x305F;&#x3044;&#x3068;&#x601D;&#x3063;&#x3066;&#x3044;&#x307E;&#x3057;&#x305F;&#x3002;&#x5B9F;&#x969B;&#x306F;&#x3082;&#x3063;&#x3068;&#x305F;&#x304F;&#x3055;&#x3093;&#x306E;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x3092;&#x4F7F;&#x7528;&#x3057;&#x305F;&#x308A;&#x3001;&#x5171;&#x901A;&#x30B3;&#x30F3;&#x30DD;&#x30FC;&#x30CD;&#x30F3;&#x30C8;&#x3084;&#x95A2;&#x6570;&#x3092;&#x4F5C;&#x6210;&#x3057;&#x305F;&#x308A;&#x3068;&#x3088;&#x308A;&#x52B9;&#x7387;&#x7684;&#x306A;&#x958B;&#x767A;&#x304C;&#x884C;&#x308F;&#x308C;&#x308B;&#x304B;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x3002;<br>
+React&#x958B;&#x767A;&#x306F;&#x753B;&#x9762;&#x3067;&#x3059;&#x3050;&#x306B;&#x78BA;&#x8A8D;&#x3067;&#x304D;&#x308B;&#x3068;&#x3044;&#x3046;&#x70B9;&#x304C;&#x4E00;&#x756A;&#x306E;&#x918D;&#x9190;&#x5473;&#x304B;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x304C;&#x3001;&#x500B;&#x4EBA;&#x7684;&#x306B;&#x306F;&#x300C;<strong>&#x3044;&#x304B;&#x306B;&#x3057;&#x3066;&#x5171;&#x901A;&#x5316;&#x3057;&#x3001;1&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x8FBA;&#x308A;&#x306E;&#x8A18;&#x8FF0;&#x91CF;&#x3092;&#x6E1B;&#x3089;&#x3057;&#x3066;&#x30AD;&#x30EC;&#x30A4;&#x306B;&#x3059;&#x308B;&#x304B;</strong>&#x300D;&#x3068;&#x3044;&#x3046;&#x70B9;&#x304C;&#x4E00;&#x756A;&#x697D;&#x3057;&#x3044;&#x3068;&#x611F;&#x3058;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<p>&#x4ECA;&#x56DE;&#x4F5C;&#x6210;&#x3057;&#x305F;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3082;&#x307E;&#x3060;&#x307E;&#x3060;&#x62E1;&#x5F35;&#x306E;&#x4F59;&#x5730;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x306E;&#x3067;&#x3001;&#x305C;&#x3072;&#x6642;&#x9593;&#x304C;&#x3042;&#x308B;&#x65B9;&#x306F;&#x72EC;&#x81EA;&#x306E;&#x5B9F;&#x88C5;&#x3092;&#x65BD;&#x3057;&#x3066;&#x307F;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
+<p>&#x305D;&#x308C;&#x3067;&#x306F;4&#x56DE;&#x306B;&#x6E21;&#x308A;&#x304A;&#x4ED8;&#x304D;&#x5408;&#x3044;&#x3044;&#x305F;&#x3060;&#x304D;&#x3001;&#x3042;&#x308A;&#x304C;&#x3068;&#x3046;&#x3054;&#x3056;&#x3044;&#x307E;&#x3057;&#x305F;&#xFF01;</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
